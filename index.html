@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en" ng-app="Dashboard">
 <head>
-  <meta charset="UTF-8">
+	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dashboard</title>
+	<title>Dashboard</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -139,11 +139,11 @@
         <!-- End Header Bar -->
 
         <!-- Main Content -->
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="alert alert-success">Thanks for visiting! Feel free to create pull requests to improve the dashboard!</div>
-            </div>
+        <div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
+          <div class="col-xs-12">
+            <alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
           </div>
+        </div>
 
           <div class="row">
             <div class="col-lg-3 col-md-6 col-xs-12">
