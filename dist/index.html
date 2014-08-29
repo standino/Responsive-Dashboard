@@ -200,10 +200,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-1">
           <div ng-controller="TabsDemoCtrl">
 
-            <tabset>
+            <tabset vertical="true"  type="tabs">
+              <tab heading="销量预测"></tab>
+              <tab heading="市场分析"></tab>
+            </tabset>
+          </div>
+        </div>
+        <div class="col-lg-11">
+          <div ng-controller="TabsDemoCtrl">
+            <tabset >
               <tab heading="总体情况">
                 Static content
               </tab>
