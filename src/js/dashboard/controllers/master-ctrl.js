@@ -49,3 +49,16 @@ function MasterCtrl($scope, $cookieStore) {
 
     window.onresize = function() { $scope.$apply(); };
 }
+
+TabsDemoCtrl = function ($scope) {
+  $scope.tabs = [
+    { title:'品类分析', content:'Dynamic content 1' },
+    { title:'部门分析', content:'Dynamic content 2', disabled: true }
+  ];
+
+  $scope.alertMe = function() {
+    setTimeout(function() {
+      alert('You\'ve selected the alert tab!');
+    });
+  };
+};
